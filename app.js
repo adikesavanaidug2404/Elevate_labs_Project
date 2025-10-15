@@ -104,7 +104,7 @@ app.get("/", (req, res) => {
   <body>
     <header>
       <h1>🚀 Elevate Labs Dashboard</h1>
-      <p>By <strong>Adikesava Naidu</strong> — Interactive Node.js App Demo</p>
+      <p>By <strong>Gandham Adikesava Naidu</strong> — Interactive Node.js App Demo</p>
       <button class="mode-toggle" id="modeToggle">Dark Mode</button>
     </header>
 
@@ -116,7 +116,6 @@ app.get("/", (req, res) => {
         <li>Health check endpoint at <code>/health</code></li>
         <li>About route with project intro</li>
         <li>Server info endpoint (<code>/api/server-info</code>)</li>
-        <li>Docker-ready (included in repo)</li>
       </ul>
 
       <div class="controls">
@@ -180,8 +179,7 @@ app.get("/api/features", (req, res) => {
       "Feature API endpoint /api/features",
       "Health check /health",
       "About route /about",
-      "Server info /api/server-info",
-      "Docker-ready deployment"
+      "Server info /api/server-info"
     ]
   });
 });

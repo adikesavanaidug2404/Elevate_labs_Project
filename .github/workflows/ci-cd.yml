@@ -36,3 +36,6 @@ jobs:
 
       - name: Push Docker image to Docker Hub
         run: docker push ${{ secrets.DOCKER_USERNAME }}/elevate-labs-my-project:latest
+
+      - name: Notify Docker image location
+        run: echo "Docker image is available at https://hub.docker.com/r/${{ secrets.DOCKER_USERNAME }}/elevate-labs-my-project:latest"
