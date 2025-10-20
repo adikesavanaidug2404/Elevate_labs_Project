@@ -49,16 +49,38 @@ docker-compose up -d
 ```
 ### Using Direct Docker Command
 ```bash
-docker pull adikesavanaidug2404/elevate-labs-demo:latest
+docker pull docker pull adikesavanaidug2404 elevate-labs-my-project:latest
 ```
 ```bash
-docker run -d -p 8081:8081 your-dockerhub-username/elevate-labs-demo:latest
+docker run -d -p 8081:8081 adikesavanaidug2404 elevate-labs-my-project:latest
 ```
 ### Using Minikube
+## 🧩 Prerequisites
+
+- [Minikube](https://minikube.sigs.k8s.io/docs/start/)
+- [kubectl](https://kubernetes.io/docs/tasks/tools/)
+- Docker installed and configured
+
+### 🚀 Steps to Deploy
+
+## 1. Start Minikube
 ```bash
 minikube start
+```
+## 2. Apply the Deployment
+```bash
 kubectl apply -f k8s-deployment.yaml
 ```
+## 3. Verify Pods and Services
+```bash
+kubectl get pods
+kubectl get svc
+```
+## 4. Access the Application
+```bash
+minikube service elevate-labs-my-project-service
+```
+
 
 ---
 

@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elevate-labs-my-project
+  labels:
+    app: elevate-labs-my-project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: elevate-labs-my-project
+  template:
+    metadata:
+      labels:
+        app: elevate-labs-my-project
+    spec:
+      containers:
+        - name: elevate-labs-my-project
+          image: adikesavanaidug2404/elevate-labs-my-project:latest
+          ports:
+            - containerPort: 8081
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: elevate-labs-my-project-service
+spec:
+  selector:
+    app: elevate-labs-my-project
+  ports:
+    - protocol: TCP
+      port: 8081
+      targetPort: 8081
+  type: NodePort
